@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>أديار - من نحن</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1a1a1a",
+                        accent: "#C59D5F",
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#121212",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E1E1E",
+                        "text-light": "#333333",
+                        "text-dark": "#E5E5E5",
+                        "muted-light": "#6B7280",
+                        "muted-dark": "#9CA3AF",
+                    },
+                    fontFamily: {
+                        display: ["'IBM Plex Sans Arabic'", "sans-serif"],
+                        body: ["'IBM Plex Sans Arabic'", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop')",
+                    }
+                },
+            },
+        };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C59D5F;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a6844d;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #2d2d2d;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+<header class="fixed w-full z-50 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+<div class="text-2xl font-bold text-primary dark:text-white flex items-center gap-2">
+<span class="material-icons-outlined text-accent">apartment</span>
+            أديار
+        </div>
+<nav class="hidden md:flex gap-8 items-center text-sm font-medium">
+<a class="text-text-light dark:text-text-dark hover:text-accent dark:hover:text-accent transition" href="#">الرئيسية</a>
+<a class="text-text-light dark:text-text-dark hover:text-accent dark:hover:text-accent transition" href="#">مشاريعنا</a>
+<a class="text-accent dark:text-accent font-bold transition" href="#">عن أديار</a>
+<a class="text-text-light dark:text-text-dark hover:text-accent dark:hover:text-accent transition" href="#">المدونة</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-text-light dark:text-text-dark transition" id="theme-toggle">
+<span class="material-icons-outlined dark:hidden">dark_mode</span>
+<span class="material-icons-outlined hidden dark:block">light_mode</span>
+</button>
+<a class="px-6 py-2.5 bg-primary text-white rounded-full text-sm font-semibold hover:bg-opacity-90 transition shadow-lg" href="#">
+                تواصل معنا
+            </a>
+</div>
+</div>
+</header>
+<section class="relative h-[60vh] min-h-[500px] flex items-center justify-center pt-20">
+<div class="absolute inset-0 bg-hero-pattern bg-cover bg-center bg-no-repeat">
+<div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-background-light dark:to-background-dark"></div>
+</div>
+<div class="container mx-auto px-6 relative z-10 text-center w-full max-w-4xl">
+<h1 class="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg leading-tight">
+            عن أديار
+        </h1>
+<p class="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
+            نحن نبني أكثر من مجرد عقارات، نحن نصيغ مستقبلاً من الرفاهية والاستقرار في المملكة العربية السعودية.
+        </p>
+<div class="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+</div>
+</section>
+<section class="py-16 md:py-24 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1 relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl"></div>
+<img alt="Meeting Room" class="rounded-3xl shadow-2xl relative z-10 w-full h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeRe8VnuiWK2mE6yHwfGModyQuYJvaudMrALoLX275af3lywcSkPIkoWTxM0eZ2f4GlXKdpxRpNP0Kr7je66IKbNUqychN253JroD4gDxwc-VtjJn-NGHKoRMfa3GjPxw9d4lgfUfM59zhmwjI7WX0Wjws7tTAiThlijJGVRKQNIxWSKd2v6XYsMvk1vgebjBo7pWAwrV72vVd3YMphdvvs50Aa2zHO6XOb8lvEes5qE5WSFi3IUcp6NcgncxSbDgs4byxsE_ZKW8"/>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 dark:bg-white/10 rounded-full blur-2xl -z-10"></div>
+</div>
+<div class="order-1 md:order-2 space-y-8">
+<div>
+<span class="text-accent font-bold tracking-wider text-sm uppercase mb-2 block">رسالتنا</span>
+<h2 class="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4 leading-tight">
+                        إعادة تعريف مفهوم السكن<br/> والاستثمار العقاري
+                    </h2>
+<p class="text-muted-light dark:text-muted-dark text-lg leading-relaxed">
+                        في أديار، نلتزم بتقديم حلول عقارية مبتكرة تتجاوز التوقعات. نسعى لتمكين عملائنا من اتخاذ قرارات ذكية ومستنيرة، سواء كانوا يبحثون عن منزل الأحلام أو فرصة استثمارية واعدة، من خلال الجمع بين الخبرة العميقة والنزاهة المطلقة.
+                    </p>
+</div>
+<div class="pt-6 border-t border-gray-200 dark:border-gray-800">
+<h3 class="text-xl font-bold text-primary dark:text-white mb-3">رؤيتنا</h3>
+<p class="text-muted-light dark:text-muted-dark text-lg leading-relaxed">
+                        أن نكون الخيار الأول والشريك الأكثر موثوقية في قطاع العقارات في المملكة، مساهمين بفعالية في تحقيق مستهدفات جودة الحياة ضمن رؤية المملكة 2030.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 md:py-24 bg-surface-light dark:bg-surface-dark overflow-hidden">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<span class="text-accent font-bold tracking-wider text-sm uppercase mb-2 block">رحلة التميز</span>
+<h2 class="text-3xl md:text-4xl font-bold text-primary dark:text-white">قصتنا في المملكة</h2>
+</div>
+<div class="relative">
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-100 dark:bg-gray-800 -translate-y-1/2 rounded-full"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+<div class="group relative">
+<div class="hidden md:block absolute top-1/2 left-1/2 w-6 h-6 bg-white dark:bg-surface-dark border-4 border-accent rounded-full -translate-x-1/2 -translate-y-1/2 z-20 group-hover:scale-125 transition duration-300"></div>
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg transition duration-300 md:mb-16 md:translate-y-[-20px]">
+<span class="text-4xl font-bold text-accent/20 absolute top-4 left-4">1998</span>
+<h3 class="text-xl font-bold text-primary dark:text-white mb-2 relative z-10">التأسيس</h3>
+<p class="text-sm text-muted-light dark:text-muted-dark">انطلاقة أديار كشركة استشارات عقارية صغيرة في قلب الرياض برؤية طموحة.</p>
+</div>
+</div>
+<div class="group relative">
+<div class="hidden md:block absolute top-1/2 left-1/2 w-6 h-6 bg-white dark:bg-surface-dark border-4 border-gray-300 dark:border-gray-600 group-hover:border-accent rounded-full -translate-x-1/2 -translate-y-1/2 z-20 transition duration-300"></div>
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg transition duration-300 md:mt-16 md:translate-y-[20px]">
+<span class="text-4xl font-bold text-accent/20 absolute top-4 left-4">2005</span>
+<h3 class="text-xl font-bold text-primary dark:text-white mb-2 relative z-10">التوسع الإقليمي</h3>
+<p class="text-sm text-muted-light dark:text-muted-dark">افتتاح فروع جديدة في جدة والدمام وبدء إدارة مشاريع سكنية كبرى.</p>
+</div>
+</div>
+<div class="group relative">
+<div class="hidden md:block absolute top-1/2 left-1/2 w-6 h-6 bg-white dark:bg-surface-dark border-4 border-gray-300 dark:border-gray-600 group-hover:border-accent rounded-full -translate-x-1/2 -translate-y-1/2 z-20 transition duration-300"></div>
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg transition duration-300 md:mb-16 md:translate-y-[-20px]">
+<span class="text-4xl font-bold text-accent/20 absolute top-4 left-4">2015</span>
+<h3 class="text-xl font-bold text-primary dark:text-white mb-2 relative z-10">التحول الرقمي</h3>
+<p class="text-sm text-muted-light dark:text-muted-dark">إطلاق منصة أديار الرقمية لتسهيل عمليات البحث والبيع والشراء لعملائنا.</p>
+</div>
+</div>
+<div class="group relative">
+<div class="hidden md:block absolute top-1/2 left-1/2 w-6 h-6 bg-white dark:bg-surface-dark border-4 border-gray-300 dark:border-gray-600 group-hover:border-accent rounded-full -translate-x-1/2 -translate-y-1/2 z-20 transition duration-300"></div>
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg transition duration-300 md:mt-16 md:translate-y-[20px]">
+<span class="text-4xl font-bold text-accent/20 absolute top-4 left-4">2024</span>
+<h3 class="text-xl font-bold text-primary dark:text-white mb-2 relative z-10">الريادة المستدامة</h3>
+<p class="text-sm text-muted-light dark:text-muted-dark">أكثر من 25 مليار ريال قيمة الأصول المدارة وشراكات استراتيجية مع كبرى شركات التطوير.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 md:py-24 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4">قيمنا الراسخة</h2>
+<p class="text-muted-light dark:text-muted-dark max-w-2xl mx-auto">المبادئ التي توجه كل خطوة نخطوها وكل قرار نتخذه لخدمة عملائنا.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-accent group">
+<div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl">verified</span>
+</div>
+<h3 class="text-2xl font-bold text-primary dark:text-white mb-4">النزاهة والشفافية</h3>
+<p class="text-muted-light dark:text-muted-dark leading-relaxed">
+                    نؤمن بأن الثقة هي أساس أي علاقة ناجحة. نلتزم بأعلى معايير الأخلاق المهنية والوضوح التام في جميع تعاملاتنا، لا نعد بما لا نستطيع الوفاء به.
+                </p>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-primary dark:border-white group">
+<div class="w-16 h-16 bg-primary/5 dark:bg-white/10 rounded-2xl flex items-center justify-center text-primary dark:text-white mb-6 group-hover:bg-primary dark:group-hover:bg-white group-hover:text-white dark:group-hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl">lightbulb</span>
+</div>
+<h3 class="text-2xl font-bold text-primary dark:text-white mb-4">الابتكار والتطوير</h3>
+<p class="text-muted-light dark:text-muted-dark leading-relaxed">
+                    نسعى دائماً لتقديم حلول إبداعية تواكب تطورات السوق واحتياجات العصر. نستخدم التكنولوجيا والبيانات لتقديم تجربة عقارية سلسة وذكية.
+                </p>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-accent group">
+<div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl">handshake</span>
+</div>
+<h3 class="text-2xl font-bold text-primary dark:text-white mb-4">التركيز على العميل</h3>
+<p class="text-muted-light dark:text-muted-dark leading-relaxed">
+                    أنت محور اهتمامنا. نستمع لاحتياجاتك بعناية، ونفهم طموحاتك، ونعمل جاهدين لتحقيق أهدافك العقارية وتجاوز توقعاتك في كل مرحلة.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 md:py-24 bg-surface-light dark:bg-surface-dark">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-xl">
+<span class="text-accent font-bold tracking-wider text-sm uppercase mb-2 block">الخبرة والقيادة</span>
+<h2 class="text-3xl md:text-4xl font-bold text-primary dark:text-white">فريق القيادة</h2>
+<p class="text-muted-light dark:text-muted-dark mt-4">نخبة من الخبراء يقودون أديار نحو آفاق جديدة من النجاح.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-primary dark:text-white font-bold hover:text-accent transition" href="#">
+                انضم إلى فريقنا
+                <span class="material-icons-outlined rtl:rotate-180">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="group">
+<div class="relative overflow-hidden rounded-3xl mb-4 aspect-[3/4]">
+<img alt="CEO" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVzu1a7IPPuCxMGY9oGZWbIHAK6dq5W5S6ZoyauDs2TVk3mbOWL1ThMfIutFRpMchkKWh_ctiOFnf3JTh9qjW-v3niH4JegjlCOo0HDTJYQ5Mp5EfbcSm5tMWjOVfIEDmNkxnvd10ws7R_D3v3eGQ72uVOOV-IbN9arXwX1Z39MXFbn-68mGdQfV7WeQlez7-igfBIsJL4VPKlcJ4EXYLJkEpRAI0jEwVzuZn5EGS8xyFJnmT4-dlMg1zYrysD1Es4-X70oNMD0eI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+<div class="flex gap-3 justify-center">
+<a class="w-8 h-8 bg-white/20 hover:bg-white text-white hover:text-primary rounded-full flex items-center justify-center transition backdrop-blur-sm" href="#"><span class="text-xs">In</span></a>
+<a class="w-8 h-8 bg-white/20 hover:bg-white text-white hover:text-primary rounded-full flex items-center justify-center transition backdrop-blur-sm" href="#"><span class="text-xs">X</span></a>
+</div>
+</div>
+</div>
+<h3 class="text-xl font-bold text-primary dark:text-white">خالد العمران</h3>
+<p class="text-accent text-sm font-medium">الرئيس التنفيذي</p>
+</div>
+<div class="group">
+<div class="relative overflow-hidden rounded-3xl mb-4 aspect-[3/4]">
+<img alt="CTO" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9MAldaAbGYm_kPb_PdZKtpf2d0bUmPhggNu6gOO-9qC0gxSEF9-U-m2vfCR_GMIjRbL9ttlrHVIZwGS0EodvCSVmCGW0x_HqgJIUwIInUJ31OvTlSFTArA7BDCOtgqIPK7xNUgg0pvPm5USWENg-scNOjdfPoYXUZXeylLvnAw4hPEUNJLVNz8r3BRdtTJ1yBbSXDuwcjuzWV3CsvfFNOfrjqduwUfo82d1b0ZW7NhyOhdMA-rajdmPC8QqnjPUoDgvCdYPHPB1o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+<div class="flex gap-3 justify-center">
+<a class="w-8 h-8 bg-white/20 hover:bg-white text-white hover:text-primary rounded-full flex items-center justify-center transition backdrop-blur-sm" href="#"><span class="text-xs">In</span></a>
+</div>
+</div>
+</div>
+<h3 class="text-xl font-bold text-primary dark:text-white">د. نورة الشمري</h3>
+<p class="text-accent text-sm font-medium">مديرة العمليات</p>
+</div>
+<div class="group">
+<div class="relative overflow-hidden rounded-3xl mb-4 aspect-[3/4]">
+<img alt="Director" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvvJRYgOIdWtCf01Iv3UbQlfLkbgQn9-uXeyQepSPIt2CTWZuLUR6nctdsYfRI6slcqcP4we0KPBiizNFiUnf3LifrR2e6vrWqYk7MB-oTLKBsIZ5z6hWn4WObqe3ONmT4PATKiVlonk2l-y--GYwbXrtbzcfadPfswMuWCTfezFzeycpfUiuVvrwxk7jgSE0Jgxd2H7hX-kXf3rT4zjPyurD1DkKsOg-TcSHlhqufg3tmC9m-ciPTjQEJ0ETeIqygm1axL2acEVY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+<div class="flex gap-3 justify-center">
+<a class="w-8 h-8 bg-white/20 hover:bg-white text-white hover:text-primary rounded-full flex items-center justify-center transition backdrop-blur-sm" href="#"><span class="text-xs">In</span></a>
+</div>
+</div>
+</div>
+<h3 class="text-xl font-bold text-primary dark:text-white">سلمان الدوسري</h3>
+<p class="text-accent text-sm font-medium">رئيس قطاع المبيعات</p>
+</div>
+<div class="group">
+<div class="relative overflow-hidden rounded-3xl mb-4 aspect-[3/4]">
+<img alt="Marketing" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB39HHjUJ08KEqa2qlTa2BkDs_BR1-ahtxv7g0iywxdstjRDMJCeEUZUmO6cPh2rPR4iSvzAYIacPK54pAhKORIFUIXVPzVO2U4H3ArDGwF8tHeapiLevwuC5KFeTDJMlRV6s0egi9vCMf0yU48A6PGlCFnLO9kJTwxfHS4n4iz0IYHOATucESRXTjkwAh78WohNkVUfLojXCd3QKYlIM-gtWefTIeRpp1Yon5XheDRJIKM6Tp6BdAutf_y5rg8RdbSBQmYYHPoWeA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+<div class="flex gap-3 justify-center">
+<a class="w-8 h-8 bg-white/20 hover:bg-white text-white hover:text-primary rounded-full flex items-center justify-center transition backdrop-blur-sm" href="#"><span class="text-xs">In</span></a>
+</div>
+</div>
+</div>
+<h3 class="text-xl font-bold text-primary dark:text-white">لمى الهاشم</h3>
+<p class="text-accent text-sm font-medium">مديرة التسويق</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16">
+<div class="container mx-auto px-6">
+<div class="bg-primary rounded-3xl p-8 md:p-16 text-center relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl transition-transform duration-1000 group-hover:scale-110"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-accent/20 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl transition-transform duration-1000 group-hover:scale-110"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="text-3xl md:text-5xl font-bold text-white mb-6">كن جزءاً من قصة نجاحنا</h2>
+<p class="text-white/80 mb-8 text-lg">سواء كنت تبحث عن عقار أو ترغب في الانضمام لفريقنا، نحن هنا للترحيب بك.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="px-8 py-3 bg-accent text-white rounded-full font-bold hover:bg-opacity-90 transition shadow-lg transform hover:-translate-y-1">تواصل معنا</button>
+<button class="px-8 py-3 bg-transparent border border-white/30 text-white rounded-full font-bold hover:bg-white/10 transition transform hover:-translate-y-1">تصفح العقارات</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-primary pt-16 pb-8 text-white relative">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div class="space-y-6">
+<div class="text-2xl font-bold flex items-center gap-2">
+<span class="material-icons-outlined text-accent">apartment</span>
+                    أديار
+                </div>
+<p class="text-gray-400 text-sm leading-relaxed">
+                    الشبكة العقارية الدولية الرائدة في المملكة العربية السعودية. نقدم حلولاً عقارية متكاملة تلبي طموحاتك.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-white transition text-gray-400" href="#">
+<span class="text-sm">X</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-white transition text-gray-400" href="#">
+<span class="text-sm">In</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-white transition text-gray-400" href="#">
+<span class="text-sm">Ig</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6 text-white">روابط سريعة</h4>
+<ul class="space-y-4 text-sm text-gray-400">
+<li><a class="hover:text-accent transition" href="#">عن الشركة</a></li>
+<li><a class="hover:text-accent transition" href="#">المشاريع الحالية</a></li>
+<li><a class="hover:text-accent transition" href="#">خدماتنا</a></li>
+<li><a class="hover:text-accent transition" href="#">المدونة والأخبار</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6 text-white">الدعم</h4>
+<ul class="space-y-4 text-sm text-gray-400">
+<li><a class="hover:text-accent transition" href="#">اتصل بنا</a></li>
+<li><a class="hover:text-accent transition" href="#">الأسئلة الشائعة</a></li>
+<li><a class="hover:text-accent transition" href="#">سياسة الخصوصية</a></li>
+<li><a class="hover:text-accent transition" href="#">الشروط والأحكام</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6 text-white">تواصل معنا</h4>
+<ul class="space-y-4 text-sm text-gray-400">
+<li class="flex items-center gap-3">
+<span class="material-icons-outlined text-accent text-lg">location_on</span>
+                        الرياض، طريق الملك فهد
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-icons-outlined text-accent text-lg">phone</span>
+                        +966 11 123 4567
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-icons-outlined text-accent text-lg">email</span>
+                        info@adyar-sa.com
+                    </li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+<p>© 2023 أديار العقارية. جميع الحقوق محفوظة.</p>
+<div class="flex gap-6">
+<span class="hover:text-white cursor-pointer">International Property Network</span>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 w-full text-center overflow-hidden pointer-events-none opacity-5">
+<h1 class="text-[10rem] font-bold text-white whitespace-nowrap leading-none transform translate-y-1/3">ADYAR REAL ESTATE</h1>
+</div>
+</footer>
+<script>
+    // Dark mode toggle logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+    // Check local storage or system preference
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        htmlElement.classList.add('dark');
+    } else {
+        htmlElement.classList.remove('dark');
+    }
+    themeToggleBtn.addEventListener('click', () => {
+        htmlElement.classList.toggle('dark');
+        if (htmlElement.classList.contains('dark')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+</script>
+
+</body></html>
