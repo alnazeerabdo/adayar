@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>تفاصيل المشروع - أديار</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1a1a1a",
+                        accent: "#C59D5F",
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#121212",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E1E1E",
+                        "text-light": "#333333",
+                        "text-dark": "#E5E5E5",
+                        "muted-light": "#6B7280",
+                        "muted-dark": "#9CA3AF",
+                        "success": "#10B981",
+                        "info": "#3B82F6",
+                        "warning": "#F59E0B",
+                    },
+                    fontFamily: {
+                        display: ["'IBM Plex Sans Arabic'", "sans-serif"],
+                        body: ["'IBM Plex Sans Arabic'", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #C59D5F;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a6844d;
+        }
+
+        .dark ::-webkit-scrollbar-track {
+            background: #2d2d2d;
+        }
+
+        .gallery-main-img {
+            height: 500px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .gallery-thumb {
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-thumb:hover {
+            opacity: 0.8;
+        }
+
+        .unit-details-expanded {
+            display: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .unit-details-expanded.active {
+            display: table-row;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+    <header
+        class="fixed w-full z-50 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary dark:text-white flex items-center gap-2">
+                <span class="material-icons-outlined text-accent">apartment</span>
+                أديار
+            </div>
+            <nav class="hidden md:flex gap-8 items-center text-sm font-medium">
+                <a class="text-text-light dark:text-text-dark hover:text-accent dark:hover:text-accent transition"
+                    href="#">الرئيسية</a>
+                <a class="text-accent dark:text-accent font-bold transition" href="#">مشاريعنا</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent dark:hover:text-accent transition"
+                    href="#">عن أديار</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent dark:hover:text-accent transition"
+                    href="#">المدونة</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button
+                    class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-text-light dark:text-text-dark transition"
+                    id="theme-toggle">
+                    <span class="material-icons-outlined dark:hidden">dark_mode</span>
+                    <span class="material-icons-outlined hidden dark:block">light_mode</span>
+                </button>
+                <a class="px-6 py-2.5 bg-primary text-white rounded-full text-sm font-semibold hover:bg-opacity-90 transition shadow-lg hidden md:block"
+                    href="#">
+                    تواصل معنا
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="pt-24 pb-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col gap-2 mb-6">
+                <div class="flex items-center gap-2 text-sm text-muted-light dark:text-muted-dark">
+                    <a class="hover:text-accent" href="#">الرئيسية</a>
+                    <span class="material-icons-outlined text-xs rtl:rotate-180">chevron_right</span>
+                    <a class="hover:text-accent" href="#">مشاريعنا</a>
+                    <span class="material-icons-outlined text-xs rtl:rotate-180">chevron_right</span>
+                    <span class="text-primary dark:text-white font-medium">مشروع فيلا الياسمين</span>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mt-4">
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-2">مشروع فيلا الياسمين
+                        </h1>
+                        <div class="flex items-center gap-2 text-muted-light dark:text-muted-dark">
+                            <span class="material-icons-outlined text-accent">location_on</span>
+                            <span>الرياض، حي الياسمين، شمال طريق الملك سلمان</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 md:mt-0 flex flex-wrap gap-3">
+                        <span
+                            class="px-4 py-1.5 rounded-full bg-success/10 text-success text-sm font-bold border border-success/20">جاهز
+                            للتسليم</span>
+                        <span
+                            class="px-4 py-1.5 rounded-full bg-primary/5 dark:bg-white/10 text-primary dark:text-white text-sm font-bold border border-gray-200 dark:border-gray-700">سكني
+                            فاخر</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+                <div class="lg:col-span-8">
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 mb-8">
+                        <div class="relative group">
+                            <img alt="Project Main View"
+                                class="gallery-main-img w-full transition-transform duration-700 hover:scale-105"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjBnxmlCF09d9Ez6dEBuxp__jTlwIESJuFjCQSMPkasf5y0V_7D4ebh0VRprybB2MahcGvT5R5oAr6bFrCo14XuGv8GjDacO-oVtZsVnrfK166u-KFOTN3jsLgHMRqJBVuEH1_aXqFGPzzkt7n5o9mULaxNhSMc2UcgKLwN1vq2iANnVQAvYmvPQdsyLLNWnW-G3gSWRyLelMLZz3xZksVffNQgla8bHrV2yDlq6Dq18HgHfOdFFfUcECidkM4Up9AQPSrh15vn4I" />
+                            <div class="absolute bottom-4 left-4 flex gap-2">
+                                <button
+                                    class="bg-white/90 dark:bg-black/80 hover:bg-white text-primary dark:text-white p-2 rounded-full shadow-lg backdrop-blur-sm transition">
+                                    <span class="material-icons-outlined">fullscreen</span>
+                                </button>
+                                <button
+                                    class="bg-white/90 dark:bg-black/80 hover:bg-white text-primary dark:text-white p-2 rounded-full shadow-lg backdrop-blur-sm transition">
+                                    <span class="material-icons-outlined">share</span>
+                                </button>
+                                <button
+                                    class="bg-white/90 dark:bg-black/80 hover:bg-white text-red-500 p-2 rounded-full shadow-lg backdrop-blur-sm transition">
+                                    <span class="material-icons-outlined">favorite_border</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-4 gap-2 p-2 bg-white dark:bg-surface-dark">
+                            <div class="relative rounded-xl overflow-hidden cursor-pointer group">
+                                <img alt="Interior 1" class="gallery-thumb w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcQLS0BeP6PQPAbM2MyLBDnwBc9V9KWJHlVtLuUuuh6kmUoZOrrZ4IzplJG15AQxTAr-Ogblt54cblyAdurIMROhub565zYfJTEPHQHE3wl7U6NMg8Y5DnVjKOSNRGfM32aslapOwoOT95EGckPzs01MRJFDrdchSJYCJxcvT99mh4TM1WrfeferkZMP_LY_D8AZife0Z7zJZzX6xZsIDku7xrM6T3933cXRqXi61s2o60DBEKyNB8G5UJCFQeBrSuRV1TJkfqd8w" />
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors">
+                                </div>
+                            </div>
+                            <div class="relative rounded-xl overflow-hidden cursor-pointer group">
+                                <img alt="Interior 2" class="gallery-thumb w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeLbm23UvOaz2OY0Zl8-wSr5q2kVPzjYNKFdR9xW-XmG2CZTXRMP7f7Bu714Xjh0CAnXcehQ_JdR4q0bx5iDgNT7q69CmzF87EI5UnObMNn5Ktr_kLIb1Ndr86lmcUmyr8YIwoLb11yEd548K8eXLbedCbf-JaVvsnB4IHwTn9HdPn8JoWzV9znnIVoxcK3db7WeMFhRRiH6qS_z1F2puy2UhcBsgDjlBB95rMimO60HbiWidcrK8eymxtIA6kKK2wpTUFmSXoV1E" />
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors">
+                                </div>
+                            </div>
+                            <div class="relative rounded-xl overflow-hidden cursor-pointer group">
+                                <img alt="Exterior" class="gallery-thumb w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOf5iRlG6mwmJsDAYmqXzdWTq5XCwxsjPft9xQtzAHRuGSsFcBD-Fn8CsCKDLif_liHHH7JVlWGrMElFMJ5eK1QDlC5FxAix5S_h-wsr2Iu_PHRoVVIn64Tp15xLZfE_IPuZpDCgx0LQxrh3hp5b6j2cQKFX9mn7MMVIN1miOxFxYsFOKuF8YJgHk9PymBbFGILJvABKyhyQp2-CQWod_JQ5fc8hvs8pmSLDq2HCjRUi_dkSuAbea2o5EJ3BXoIVDZnBV6-K9lNJE" />
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors">
+                                </div>
+                            </div>
+                            <div class="relative rounded-xl overflow-hidden cursor-pointer group">
+                                <img alt="Plan" class="gallery-thumb w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOUcs5nR6JKkd0dfL98cB8oJ9JJDTolqQ3DsQIpUYVF5fE79vE3hpnx33AN5v9Fatx7bQkwHhORLZTmDRC7gEE33yJBMBvmOhQ882cUZfA5rXy3mV3-I4DNnitxe6s3zQl7TD7oR6smUoenquaUTBDI0JVf7Iz0o_He6WN8IDE-a0I2xLGxfBFpN6eipu9OVN39R7_OCWouzUYUvlF--8T52VZc89ZYvFNyqkGiXAsFVNyzAQXRijXDIedZzMxu9dUI6a74DAV9fI" />
+                                <div
+                                    class="absolute inset-0 bg-black/50 flex items-center justify-center text-white font-bold text-lg group-hover:bg-black/40 transition-colors">
+                                    +8 صور
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark rounded-3xl p-6 md:p-8 shadow-sm border border-gray-100 dark:border-gray-800 mb-8">
+                        <h2
+                            class="text-2xl font-bold text-primary dark:text-white mb-6 border-b border-gray-100 dark:border-gray-700 pb-4">
+                            نظرة عامة على المشروع
+                        </h2>
+                        <p class="text-muted-light dark:text-muted-dark leading-relaxed mb-8">
+                            يتميز مشروع فيلا الياسمين بتصميمه العصري وموقعه الاستراتيجي في قلب حي الياسمين الراقي. يضم
+                            المشروع مجموعة من الفلل السكنية المستقلة التي تم تصميمها لتلبي احتياجات العائلة السعودية
+                            العصرية، مع التركيز على الخصوصية والراحة وجودة التشطيبات. يتميز المشروع بقربه من الطرق
+                            الرئيسية والخدمات الحيوية، مما يجعله الخيار الأمثل لمن يبحث عن الرفاهية والاستقرار.
+                        </p>
+                        <h3 class="text-lg font-bold text-primary dark:text-white mb-4">مميزات المشروع</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                            <div
+                                class="flex items-center gap-3 p-3 bg-background-light dark:bg-background-dark rounded-xl">
+                                <span class="material-symbols-outlined text-accent text-3xl">pool</span>
+                                <span class="text-sm font-medium">مسبح خاص</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 bg-background-light dark:bg-background-dark rounded-xl">
+                                <span class="material-symbols-outlined text-accent text-3xl">fitness_center</span>
+                                <span class="text-sm font-medium">نادي رياضي</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 bg-background-light dark:bg-background-dark rounded-xl">
+                                <span class="material-symbols-outlined text-accent text-3xl">security</span>
+                                <span class="text-sm font-medium">أمن 24/7</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 bg-background-light dark:bg-background-dark rounded-xl">
+                                <span class="material-symbols-outlined text-accent text-3xl">local_parking</span>
+                                <span class="text-sm font-medium">مواقف خاصة</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 bg-background-light dark:bg-background-dark rounded-xl">
+                                <span class="material-symbols-outlined text-accent text-3xl">park</span>
+                                <span class="text-sm font-medium">حدائق عامة</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 bg-background-light dark:bg-background-dark rounded-xl">
+                                <span class="material-symbols-outlined text-accent text-3xl">school</span>
+                                <span class="text-sm font-medium">قريب من المدارس</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 bg-background-light dark:bg-background-dark rounded-xl">
+                                <span class="material-symbols-outlined text-accent text-3xl">shopping_cart</span>
+                                <span class="text-sm font-medium">مراكز تسوق</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 bg-background-light dark:bg-background-dark rounded-xl">
+                                <span class="material-symbols-outlined text-accent text-3xl">mosque</span>
+                                <span class="text-sm font-medium">مسجد</span>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-primary dark:text-white mb-4">الموقع على الخريطة</h3>
+                        <div class="w-full h-64 bg-gray-200 dark:bg-gray-700 rounded-2xl overflow-hidden relative">
+                            <img alt="Map Location" class="w-full h-full object-cover opacity-60 grayscale"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAegBX_fpjKCzdxoRw7UAWaIY7piz3k6ICnku3TJUROOrZUC11_WWhsz__DY-Ux_bQoccJe7OkzzI7u8FTrShv3eOfBc0EM1Ti3-KyOSBQK1tjm82DV-hmKCrxHAZqY_1ZSvjOcPskTiZq__cvCEthTOhrZ3y9xY3YBgNBsvsBdhRvRQB1sZ1c6a1hNZZ6lTK2aGH58tgadZkgItl_FzC1uDOf1zSv0iDQWcBQEagaUH3jonnaykD6uF5wGxjf2WPoQRDF6SxICKS8" />
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <button
+                                    class="bg-white text-primary px-6 py-2 rounded-full shadow-lg font-bold hover:bg-accent hover:text-white transition flex items-center gap-2">
+                                    <span class="material-icons-outlined">map</span>
+                                    عرض على خرائط جوجل
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark rounded-3xl p-6 md:p-8 shadow-sm border border-gray-100 dark:border-gray-800">
+                        <h2
+                            class="text-2xl font-bold text-primary dark:text-white mb-6 flex justify-between items-center">
+                            الوحدات المتوفرة
+                            <span
+                                class="text-sm font-normal text-muted-light dark:text-muted-dark bg-background-light dark:bg-background-dark px-3 py-1 rounded-full border border-gray-200 dark:border-gray-700">3
+                                وحدات متاحة</span>
+                        </h2>
+                        <div class="overflow-x-auto hidden md:block">
+                            <table class="w-full text-right border-collapse">
+                                <thead>
+                                    <tr
+                                        class="text-muted-light dark:text-muted-dark text-sm border-b border-gray-100 dark:border-gray-800">
+                                        <th class="py-4 px-4 font-medium">رقم الوحدة</th>
+                                        <th class="py-4 px-4 font-medium">المساحة</th>
+                                        <th class="py-4 px-4 font-medium">الغرف</th>
+                                        <th class="py-4 px-4 font-medium">الدور</th>
+                                        <!-- Price column removed -->
+                                        <th class="py-4 px-4 font-medium">الحالة</th>
+                                        <th class="py-4 px-4 font-medium"></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-sm text-primary dark:text-white">
+                                    <tr
+                                        class="group border-b border-gray-50 dark:border-gray-800/50 hover:bg-gray-50 dark:hover:bg-gray-800/30 transition-colors">
+                                        <td class="py-4 px-4 font-bold">A-101</td>
+                                        <td class="py-4 px-4">350 م²</td>
+                                        <td class="py-4 px-4">4 غرف</td>
+                                        <td class="py-4 px-4">أرضي</td>
+                                        <!-- Price cell removed -->
+                                        <td class="py-4 px-4">
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+                                                متاح
+                                            </span>
+                                        </td>
+                                        <td class="py-4 px-4 text-left">
+                                            <button
+                                                class="text-accent hover:text-primary dark:hover:text-white font-medium transition text-sm underline"
+                                                onclick="document.getElementById('details-1').classList.toggle('hidden')">
+                                                تفاصيل الوحدة
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="hidden bg-gray-50 dark:bg-gray-800/30" id="details-1">
+                                        <td class="p-6" colspan="6"> <!-- colspan adjusted -->
+                                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                                <div class="col-span-1">
+                                                    <img alt="Unit Plan" class="rounded-xl w-full h-40 object-cover"
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi8NEgzLS5w6l1vwc0SVQGb-6oYrx7ZTwla9DdMGuiNmVGl5vh7qkBEsjdO_EZAA2OLEHNyn65drI4jCQUC47BtDCa7uF2BmSMjNdoJLpsLk0buzC7pOioO8beQYqvSZEb2mkvPRVS6DwAqk2fXOhG6sRc_bIMt-zULvftVY6Tq5YS5X2dZf7jky0lXOpXWHiLqPReyMS7wtvNNWgiTXeHgC-ofma6CJ4m_mTGmYlxVooqAhij_Ry0NoSYTwneCHeqyEikzs04cqg" />
+                                                </div>
+                                                <div class="col-span-2 space-y-3">
+                                                    <h4 class="font-bold text-lg mb-2">مميزات الوحدة A-101</h4>
+                                                    <ul
+                                                        class="grid grid-cols-2 gap-2 text-muted-light dark:text-muted-dark">
+                                                        <li class="flex items-center gap-2"><span
+                                                                class="material-icons-outlined text-xs">check_circle</span>
+                                                            واجهة شمالية</li>
+                                                        <li class="flex items-center gap-2"><span
+                                                                class="material-icons-outlined text-xs">check_circle</span>
+                                                            مطبخ راكب</li>
+                                                        <li class="flex items-center gap-2"><span
+                                                                class="material-icons-outlined text-xs">check_circle</span>
+                                                            تكييف مركزي</li>
+                                                        <li class="flex items-center gap-2"><span
+                                                                class="material-icons-outlined text-xs">check_circle</span>
+                                                            غرفة خادمة</li>
+                                                    </ul>
+                                                    <div
+                                                        class="pt-3 mt-3 border-t border-gray-200 dark:border-gray-700">
+                                                        <button
+                                                            class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-opacity-90 transition">حجز
+                                                            معاينة لهذه الوحدة</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        class="group border-b border-gray-50 dark:border-gray-800/50 hover:bg-gray-50 dark:hover:bg-gray-800/30 transition-colors">
+                                        <td class="py-4 px-4 font-bold">B-204</td>
+                                        <td class="py-4 px-4">420 م²</td>
+                                        <td class="py-4 px-4">5 غرف</td>
+                                        <td class="py-4 px-4">أول</td>
+                                        <!-- Price cell removed -->
+                                        <td class="py-4 px-4">
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+                                                متاح
+                                            </span>
+                                        </td>
+                                        <td class="py-4 px-4 text-left">
+                                            <button
+                                                class="text-accent hover:text-primary dark:hover:text-white font-medium transition text-sm underline"
+                                                onclick="document.getElementById('details-2').classList.toggle('hidden')">
+                                                تفاصيل الوحدة
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="hidden bg-gray-50 dark:bg-gray-800/30" id="details-2">
+                                        <td class="p-6" colspan="6"> <!-- colspan adjusted -->
+                                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                                <div class="col-span-1">
+                                                    <img alt="Unit Plan" class="rounded-xl w-full h-40 object-cover"
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTOLV3BzdAqOOrBvtG07I5YGUTUgR49X-xHRbkYFPV9Gv1XpFq_9DzLixQutCzcLZ9ZlSfAEI4-0bL4OJkwH-XC8QKkLjXJdGybQG2kcjRPdiLGSvehvPuGQCxji5fanEy6w5tnH0Bpel0LVf2pJoZr6ke0iCj8kvL_W4KD94zps71_W4RE75gXpbtdoo3sGuE0D0-BGWEPrwPLk09UuPzwu0xpMKzK0cxwz1WZyjDI5luprDvaptpv_7ejt-FD_yd-cFh43jVBiI" />
+                                                </div>
+                                                <div class="col-span-2 space-y-3">
+                                                    <h4 class="font-bold text-lg mb-2">مميزات الوحدة B-204</h4>
+                                                    <ul
+                                                        class="grid grid-cols-2 gap-2 text-muted-light dark:text-muted-dark">
+                                                        <li class="flex items-center gap-2"><span
+                                                                class="material-icons-outlined text-xs">check_circle</span>
+                                                            واجهة شرقية</li>
+                                                        <li class="flex items-center gap-2"><span
+                                                                class="material-icons-outlined text-xs">check_circle</span>
+                                                            بلكونة واسعة</li>
+                                                        <li class="flex items-center gap-2"><span
+                                                                class="material-icons-outlined text-xs">check_circle</span>
+                                                            نظام ذكي</li>
+                                                    </ul>
+                                                    <div
+                                                        class="pt-3 mt-3 border-t border-gray-200 dark:border-gray-700">
+                                                        <button
+                                                            class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-opacity-90 transition">حجز
+                                                            معاينة لهذه الوحدة</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="group border-b border-gray-50 dark:border-gray-800/50 opacity-60">
+                                        <td class="py-4 px-4 font-bold">C-105</td>
+                                        <td class="py-4 px-4">300 م²</td>
+                                        <td class="py-4 px-4">3 غرف</td>
+                                        <td class="py-4 px-4">أرضي</td>
+                                        <!-- Price cell removed -->
+                                        <td class="py-4 px-4">
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400">
+                                                تم البيع
+                                            </span>
+                                        </td>
+                                        <td class="py-4 px-4 text-left">
+                                            <span class="text-gray-400 text-sm cursor-not-allowed">
+                                                غير متاح
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Mobile Card View for Units -->
+                        <div class="block md:hidden space-y-4">
+                            <!-- Unit A-101 Card -->
+                            <div
+                                class="bg-white dark:bg-gray-800/50 rounded-xl p-4 border border-gray-100 dark:border-gray-800 shadow-sm">
+                                <div class="flex justify-between items-start mb-3">
+                                    <h4 class="font-bold text-lg text-primary dark:text-white">A-101</h4>
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+                                        متاح
+                                    </span>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3 text-sm text-muted-light dark:text-muted-dark mb-4">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-icons-outlined text-base">square_foot</span>
+                                        <span>350 م²</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-icons-outlined text-base">bed</span>
+                                        <span>4 غرف</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-icons-outlined text-base">layers</span>
+                                        <span>أرضي</span>
+                                    </div>
+                                </div>
+                                <div class="border-t border-gray-100 dark:border-gray-700 pt-3">
+                                    <button
+                                        class="w-full text-center text-accent font-medium py-2 rounded-lg hover:bg-accent/10 transition text-sm"
+                                        onclick="document.getElementById('mobile-details-1').classList.toggle('hidden')">
+                                        تفاصيل الوحدة
+                                    </button>
+                                </div>
+                                <div class="hidden mt-4 pt-4 border-t border-gray-100 dark:border-gray-700"
+                                    id="mobile-details-1">
+                                    <div class="space-y-3">
+                                        <img alt="Unit Plan" class="rounded-lg w-full h-32 object-cover"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi8NEgzLS5w6l1vwc0SVQGb-6oYrx7ZTwla9DdMGuiNmVGl5vh7qkBEsjdO_EZAA2OLEHNyn65drI4jCQUC47BtDCa7uF2BmSMjNdoJLpsLk0buzC7pOioO8beQYqvSZEb2mkvPRVS6DwAqk2fXOhG6sRc_bIMt-zULvftVY6Tq5YS5X2dZf7jky0lXOpXWHiLqPReyMS7wtvNNWgiTXeHgC-ofma6CJ4m_mTGmYlxVooqAhij_Ry0NoSYTwneCHeqyEikzs04cqg">
+                                        <h4 class="font-bold text-sm">مميزات الوحدة</h4>
+                                        <ul
+                                            class="grid grid-cols-2 gap-2 text-xs text-muted-light dark:text-muted-dark">
+                                            <li class="flex items-center gap-1"><span
+                                                    class="material-icons-outlined text-[10px]">check_circle</span>
+                                                واجهة شمالية</li>
+                                            <li class="flex items-center gap-1"><span
+                                                    class="material-icons-outlined text-[10px]">check_circle</span> مطبخ
+                                                راكب</li>
+                                            <li class="flex items-center gap-1"><span
+                                                    class="material-icons-outlined text-[10px]">check_circle</span>
+                                                تكييف مركزي</li>
+                                            <li class="flex items-center gap-1"><span
+                                                    class="material-icons-outlined text-[10px]">check_circle</span> غرفة
+                                                خادمة</li>
+                                        </ul>
+                                        <button
+                                            class="w-full bg-primary text-white py-2 rounded-lg text-sm font-medium hover:bg-opacity-90 transition mt-2">
+                                            حجز معاينة
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Unit B-204 Card -->
+                            <div
+                                class="bg-white dark:bg-gray-800/50 rounded-xl p-4 border border-gray-100 dark:border-gray-800 shadow-sm">
+                                <div class="flex justify-between items-start mb-3">
+                                    <h4 class="font-bold text-lg text-primary dark:text-white">B-204</h4>
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+                                        متاح
+                                    </span>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3 text-sm text-muted-light dark:text-muted-dark mb-4">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-icons-outlined text-base">square_foot</span>
+                                        <span>420 م²</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-icons-outlined text-base">bed</span>
+                                        <span>5 غرف</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-icons-outlined text-base">layers</span>
+                                        <span>أول</span>
+                                    </div>
+                                </div>
+                                <div class="border-t border-gray-100 dark:border-gray-700 pt-3">
+                                    <button
+                                        class="w-full text-center text-accent font-medium py-2 rounded-lg hover:bg-accent/10 transition text-sm"
+                                        onclick="document.getElementById('mobile-details-2').classList.toggle('hidden')">
+                                        تفاصيل الوحدة
+                                    </button>
+                                </div>
+                                <div class="hidden mt-4 pt-4 border-t border-gray-100 dark:border-gray-700"
+                                    id="mobile-details-2">
+                                    <div class="space-y-3">
+                                        <img alt="Unit Plan" class="rounded-lg w-full h-32 object-cover"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTOLV3BzdAqOOrBvtG07I5YGUTUgR49X-xHRbkYFPV9Gv1XpFq_9DzLixQutCzcLZ9ZlSfAEI4-0bL4OJkwH-XC8QKkLjXJdGybQG2kcjRPdiLGSvehvPuGQCxji5fanEy6w5tnH0Bpel0LVf2pJoZr6ke0iCj8kvL_W4KD94zps71_W4RE75gXpbtdoo3sGuE0D0-BGWEPrwPLk09UuPzwu0xpMKzK0cxwz1WZyjDI5luprDvaptpv_7ejt-FD_yd-cFh43jVBiI">
+                                        <h4 class="font-bold text-sm">مميزات الوحدة</h4>
+                                        <ul
+                                            class="grid grid-cols-2 gap-2 text-xs text-muted-light dark:text-muted-dark">
+                                            <li class="flex items-center gap-1"><span
+                                                    class="material-icons-outlined text-[10px]">check_circle</span>
+                                                واجهة شرقية</li>
+                                            <li class="flex items-center gap-1"><span
+                                                    class="material-icons-outlined text-[10px]">check_circle</span>
+                                                بلكونة واسعة</li>
+                                            <li class="flex items-center gap-1"><span
+                                                    class="material-icons-outlined text-[10px]">check_circle</span> نظام
+                                                ذكي</li>
+                                        </ul>
+                                        <button
+                                            class="w-full bg-primary text-white py-2 rounded-lg text-sm font-medium hover:bg-opacity-90 transition mt-2">
+                                            حجز معاينة
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Unit C-105 Card (Sold) -->
+                            <div
+                                class="bg-gray-50 dark:bg-gray-800/30 rounded-xl p-4 border border-gray-100 dark:border-gray-800 opacity-70">
+                                <div class="flex justify-between items-start mb-3">
+                                    <h4 class="font-bold text-lg text-primary dark:text-white">C-105</h4>
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400">
+                                        تم البيع
+                                    </span>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3 text-sm text-muted-light dark:text-muted-dark">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-icons-outlined text-base">square_foot</span>
+                                        <span>300 م²</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-icons-outlined text-base">bed</span>
+                                        <span>3 غرف</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-icons-outlined text-base">layers</span>
+                                        <span>أرضي</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 space-y-8">
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 sticky top-28">
+                        <div class="text-center mb-8">
+                            <p class="text-sm text-muted-light dark:text-muted-dark mb-2">يبدأ السعر من</p>
+                            <h3 class="text-4xl font-bold text-accent mb-2">مشروع سكني فاخر</h3>
+                            <!-- Price and payment plan removed -->
+                        </div>
+                        <div class="space-y-4 mb-8">
+                            <button
+                                class="w-full py-4 bg-accent hover:bg-[#b08d55] text-white rounded-xl font-bold transition shadow-lg flex items-center justify-center gap-2 transform active:scale-95">
+                                <span class="material-icons-outlined">calendar_today</span>
+                                احجز موعد زيارة
+                            </button>
+                            <button
+                                class="w-full py-4 bg-primary hover:bg-gray-800 dark:hover:bg-gray-700 text-white rounded-xl font-bold transition shadow-lg flex items-center justify-center gap-2 transform active:scale-95">
+                                <span class="material-icons-outlined">whatsapp</span>
+                                تواصل معنا عبر واتساب
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-100 dark:border-gray-700 pt-6">
+                            <h4 class="font-bold text-primary dark:text-white mb-4">مدير المبيعات</h4>
+                            <div class="flex items-center gap-4">
+                                <div class="relative">
+                                    <img alt="Agent" class="w-14 h-14 rounded-full object-cover border-2 border-accent"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzdOI0uPLWl6aRkwzwsDMV_0j--cLMNCdbXGbuXn2e198sTNMalziigsNKvhJK3QZaJq3Woqghd12a93HmOtFrkVuBeEQPhdKGf7eULdDIU5hJwWpW9YU5x_C7bOKBRWdQr0TFi08yhoBkpNsMpRRJA4Mm-_iTME9C_pc5h5BkV3V6mkivm17PohgJsMwRTrVV1T9FcGat6I9RQdEB8d-EJSJE6ijeb1kO8POSAeNYrSbvOu4e0neEfJ2H7X4cFvJYR6zfU-i-7Gg" />
+                                    <span
+                                        class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></span>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-primary dark:text-white">أحمد العلي</h5>
+                                    <p class="text-xs text-muted-light dark:text-muted-dark mb-1">خبير عقاري معتمد</p>
+                                    <div class="flex gap-1 text-accent text-xs">
+                                        <span class="material-icons-outlined text-[14px]">star</span>
+                                        <span class="material-icons-outlined text-[14px]">star</span>
+                                        <span class="material-icons-outlined text-[14px]">star</span>
+                                        <span class="material-icons-outlined text-[14px]">star</span>
+                                        <span class="material-icons-outlined text-[14px]">star_half</span>
+                                        <span class="text-muted-light dark:text-muted-dark mr-1">(4.8)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="mt-6 space-y-3">
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-muted-light dark:text-muted-dark mb-1">الاسم
+                                        الكامل</label>
+                                    <input
+                                        class="w-full rounded-lg bg-background-light dark:bg-background-dark border-gray-200 dark:border-gray-700 text-sm focus:ring-accent focus:border-accent"
+                                        placeholder="اسمك الكريم" type="text" />
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-muted-light dark:text-muted-dark mb-1">رقم
+                                        الجوال</label>
+                                    <input
+                                        class="w-full rounded-lg bg-background-light dark:bg-background-dark border-gray-200 dark:border-gray-700 text-sm focus:ring-accent focus:border-accent"
+                                        placeholder="05xxxxxxxx" type="tel" />
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-muted-light dark:text-muted-dark mb-1">رسالتك</label>
+                                    <textarea
+                                        class="w-full rounded-lg bg-background-light dark:bg-background-dark border-gray-200 dark:border-gray-700 text-sm focus:ring-accent focus:border-accent"
+                                        placeholder="أرغب في الاستفسار عن..." rows="3"></textarea>
+                                </div>
+                                <button
+                                    class="w-full py-3 bg-transparent border-2 border-primary dark:border-white text-primary dark:text-white rounded-lg font-bold hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition text-sm">
+                                    إرسال استفسار
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3 md:hidden">
+        <button
+            class="w-14 h-14 bg-accent text-white rounded-full shadow-xl flex items-center justify-center hover:bg-opacity-90 transition">
+            <span class="material-icons-outlined">call</span>
+        </button>
+        <button
+            class="w-14 h-14 bg-success text-white rounded-full shadow-xl flex items-center justify-center hover:bg-opacity-90 transition">
+            <span class="material-icons-outlined">whatsapp</span>
+        </button>
+    </div>
+    <footer class="bg-primary pt-16 pb-8 text-white relative">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <div class="text-2xl font-bold flex items-center gap-2">
+                        <span class="material-icons-outlined text-accent">apartment</span>
+                        أديار
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        الشبكة العقارية الدولية الرائدة في المملكة العربية السعودية. نقدم حلولاً عقارية متكاملة تلبي
+                        طموحاتك.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-white transition text-gray-400"
+                            href="#">
+                            <span class="text-sm">X</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-white transition text-gray-400"
+                            href="#">
+                            <span class="text-sm">In</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-white transition text-gray-400"
+                            href="#">
+                            <span class="text-sm">Ig</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">روابط سريعة</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a class="hover:text-accent transition" href="#">عن الشركة</a></li>
+                        <li><a class="hover:text-accent transition" href="#">المشاريع الحالية</a></li>
+                        <li><a class="hover:text-accent transition" href="#">خدماتنا</a></li>
+                        <li><a class="hover:text-accent transition" href="#">المدونة والأخبار</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">الدعم</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a class="hover:text-accent transition" href="#">اتصل بنا</a></li>
+                        <li><a class="hover:text-accent transition" href="#">الأسئلة الشائعة</a></li>
+                        <li><a class="hover:text-accent transition" href="#">سياسة الخصوصية</a></li>
+                        <li><a class="hover:text-accent transition" href="#">الشروط والأحكام</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">تواصل معنا</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-center gap-3">
+                            <span class="material-icons-outlined text-accent text-lg">location_on</span>
+                            الرياض، طريق الملك فهد
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-icons-outlined text-accent text-lg">phone</span>
+                            +966 11 123 4567
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-icons-outlined text-accent text-lg">email</span>
+                            info@adyar-sa.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>© 2023 أديار العقارية. جميع الحقوق محفوظة.</p>
+                <div class="flex gap-6">
+                    <span class="hover:text-white cursor-pointer">International Property Network</span>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 w-full text-center overflow-hidden pointer-events-none opacity-5">
+            <h1 class="text-[10rem] font-bold text-white whitespace-nowrap leading-none transform translate-y-1/3">ADYAR
+                REAL ESTATE</h1>
+        </div>
+    </footer>
+    <script>
+        // Dark mode toggle logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        // Check local storage or system preference
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            if (htmlElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
